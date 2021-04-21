@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/hover.css">
+    <title>HUNGRY</title>
+    <style>
+    html, body
+    {
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+    }
+    *
+    {
+        box-sizing: border-box;
+        font-family: 'Montserrat' , sans-serif;
+        scroll-behavior: smooth;
+    }
+    body::-webkit-scrollbar
+    {
+        width: 5px;
+    }
+    body::-webkit-scrollbar-thumb
+    {
+        background-color: orange
+    }
+    body::-webkit-scrollbar-track
+    {
+        background-color: black;
+    }
+    .main1
+    {
+        width: 100%;
+        height: 90vh;
+        background-image: url('images/back.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+    }
+    .navv
+    {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px 8%;
+        position: fixed;
+        z-index: 1000;
+        background: -webkit-linear-gradient(to bottom, #0202026e, #88888800);
+        background: linear-gradient(to bottom, #0202026e, #88888800);
+
+    }
+    .logo
+    {
+        cursor: pointer;
+        margin-right: auto;
+        color: white;
+    }
+    .nav_links
+    {
+        list-style: none;
+    }
+    .nav_links > li
+    {
+        display: inline-block;
+        padding: 0px 15px;
+    }
+    .nav_links>li>a
+    {
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+        color: white;
+    }
+    .nav_links>li>a:hover
+    {
+        border-bottom: 2px solid rgb(226, 178, 74);
+    }
+    .content
+    {
+        width: 90%;
+        height: 50vh;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30%;
+    }
+    .tag
+    {
+        font-size: 65px;
+        text-align: center;
+        padding-top: 5%;
+        font-family: 'Aguafina Script', cursive;
+        color: white;
+    }
+    .social
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 4%;
+    }
+    .social > .uk-icon-button
+    {
+        background-color: white;
+        color: rgb(226, 178, 74);
+    }
+    .main2
+    {
+        width: 100%;
+        height: 160vh;
+        background-color: whitesmoke;
+        padding: 5%;
+    }
+    .headd
+    {
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        padding-top: 4%;
+    }
+    .abou
+    {
+        font-size: 80px;
+        font-family: 'Aguafina Script', cursive;
+        color: rgb(192, 131, 0);
+        display: flex;
+    }
+    .contentt
+    {
+        width: 100%;
+        height: 85%;
+        justify-content: space-between;
+    }
+    .imagee
+    {
+        width: 100%;
+        height: 35%;
+        position: relative;
+    }
+    .back
+    {
+        width: 90%;
+        height: 80%;
+        position: absolute;
+        border-radius: 5%;
+        background-image: url('images/a.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border: 2px solid rgb(212, 212, 212);
+        right: 5%;
+        top: 9%;
+    }
+    .textt
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .line
+    {
+        font-weight: bold;
+        font-size: 22px;
+    }
+    .btns
+    {
+        display: flex;
+        justify-content: center;
+        height: 6.5vh;
+    }
+    .btn
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+        width: 40%;
+        border-radius: 5px;
+        background-color: rgb(202, 202, 202);
+        margin-right: 10px;
+    }
+    .btn:hover
+    {
+        background-color: black;
+    }
+    .btn > a
+    {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        display: inline-block;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .btn > a:hover
+    {
+        color: white;
+    }
+    .btn2
+    {
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+        width: 40%;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+    }
+    .btn2:hover
+    {
+        background-color: rgb(202, 202, 202);
+    }
+    .btn2 > a
+    {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        display: inline-block;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .btn2 > a:hover
+    {
+        color: black;
+    }
+    .main3
+    {
+        width: 100%;
+        height: 190vh;
+        background-image: url('images/d.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .overlayy
+    {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.6;
+        display: flex;
+        justify-content: center center;
+        position: absolute;
+    }
+    .line3
+    {
+        width: 80%;
+        height: 15vh;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        padding-top: 7%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contenttt
+    {
+        width: 85%;
+        height: 160vh;
+        position: absolute;
+        top: 16vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .lane1
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .lane2
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .card1, .card2
+    {
+        width: 100%;
+        height: 50%;
+        padding: 5%;
+    }
+    .texst
+    {
+        clip-path: polygon(100% 0, 100% 86%, 55% 86%, 49% 100%, 43% 86%, 0 86%, 0 0);
+        width: 100%;
+        height: 48%;
+        border-radius: 10px;
+        background-color: rgba(161, 161, 161, 0.658);
+        font-size: 15px;
+        font-family: 'PT Serif', serif;
+        font-weight: bold;
+        color: white;
+        padding: 10%;
+        text-align: center;
+    }
+    .tetimag
+    {
+        height: 40%;
+        width: 100%;
+        padding-top: 3%;
+    }
+    .tetimg1, .tetimg2, .tetimg3, .tetimg4
+    {
+        width: 23%;
+        height: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+    }
+    .tetimg1
+    {
+        background-image: url('images/testi1.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .tetimg1:hover
+    {
+        border: 3px solid rgb(226, 178, 74);
+    }
+    .tetimg2
+    {
+        background-image: url('images/testi2.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .tetimg2:hover
+    {
+        border: 3px solid rgb(226, 178, 74);
+    }
+    .tetimg3
+    {
+        background-image: url('images/testi3.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .tetimg3:hover
+    {
+        border: 3px solid rgb(226, 178, 74);
+    }
+    .tetimg4
+    {
+        background-image: url('images/testi4.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .tetimg4:hover
+    {
+        border: 3px solid rgb(226, 178, 74);
+    }
+    .tettext
+    {
+        width: 100%;
+        height: 12%;
+        color: white;
+        text-align: center;
+        padding: 1%;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .tettext > a
+    {
+        text-decoration: none;
+        color: rgb(226, 178, 74);
+    }
+    .tettext > a:hover
+    {
+        color: white;
+    }
+    .main4
+    {
+        width: 100%;
+        height: 250vh;
+        padding: 5%;
+    }
+    .hedd
+    {
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    .abo
+    {
+        padding-top: 3%;
+        font-size: 80px;
+        font-family: 'Aguafina Script', cursive;
+        color: rgb(192, 131, 0);
+    }
+    .contentttt
+    {
+        width: 100%;
+        height: 85%;
+        border: 5px solid black;
+    }
+    .lanee1
+    {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: space-between;
+        border: 5px solid gold;
+    }
+    .lanee2
+    {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-between;
+        border: 5px solid greenyellow;
+    }
+    .main5
+    {
+        width: 100%;
+        height: 60vh;
+        background-image: url('images/c.jpg');
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    .overlay
+    {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.6;
+        display: flex;
+        justify-content: center center;
+        position: absolute;
+    }
+    .linee
+    {
+        width: 90%;
+        height: 16vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+    }
+    .he1, .he2
+    {
+        color: white;
+    }
+    .he1
+    {
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        margin: 0px;
+        font-family: 'Montserrat' , sans-serif;
+        font-weight: bold;
+    }
+    .he2
+    {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        bottom: 0%;
+        margin: 0px;
+        font-family: 'Montserrat' , sans-serif;
+        font-weight: bold;
+    }
+    .he2 > a
+    {
+        text-decoration: none;
+        color: goldenrod;
+    }
+    .main7
+    {
+        width: 100%;
+        height: 60vh;
+        background-image: url('images/b.jpg');
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    .lineee
+    {
+        width: 85%;
+        height: 16vh;
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+    }
+    .he3
+    {
+        width: 100%;
+        text-align: center;
+        font-size: 27px;
+        font-family: 'Montserrat' , sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+    .he4
+    {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        font-family: 'Aguafina Script', cursive;
+        font-weight: bold;
+        padding-top: 8px;
+    }
+    .he3> a
+    {
+        text-decoration: none;
+        color: goldenrod;
+    }
+    .he4 > a
+    {
+        font-family: 'Aguafina Script', cursive;
+        font-weight: bold;
+        text-decoration: none;
+        color: goldenrod;
+    }
+    .main8
+    {
+        width: 100%;
+        height: 250vh;
+        padding: 5%;
+        position: relative;
+    }
+    .main8 > .hedd
+    {
+        height: 25vh;
+        padding-top: 3%;
+    }
+    .main8 > .hedd > .abou
+    {
+        font-size: 80px;
+    }
+    .galm
+    {
+        width: 95%;
+        height: 90%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .galma, .galmb
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .galm1, .galm2, .galm3, .galm4
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .galm2
+    {
+        display: flex;
+    }
+    .lan1
+    {
+        width: 100%;
+        height: 50%;
+        display: flex;
+    }
+    .lan2
+    {
+        width: 50%;
+        height: 100%;
+    }
+    .im1, .im2
+    {
+        width: 50%;
+        height: 100%;
+    }
+    .im3
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .im4, .im5
+    {
+        width: 100%;
+        height: 50%;
+    }
+    .im6
+    {
+        width: 50%;
+        height: 100%;
+    }
+    .im7
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .im1, .im2, .im3, .im4, .im5, .im6, .im7
+    {
+        border: 8px solid white;
+        padding: 5%;
+    }
+    .main10
+    {
+        width: 100%;
+        height: 135vh;
+        padding: 5%;
+        position: relative;
+    }
+    .form
+    {
+        width: 90%;
+        height: 12vh;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 3%;
+    }
+    .lab
+    {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+    }
+    .labli
+    {
+        color: black;
+        text-align: center;
+        font-size: 12px;
+    }
+    .cform
+    {
+        margin-top: 2%;
+        width: 90%;
+        height: 80vh;
+        border: 1px solid whitesmoke;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 3%;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+        justify-content: center;
+    }
+    label
+    {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+    }
+    input, select
+    {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        height: 5vh;
+    }
+    .select
+    {
+        height: 14vh;
+    }
+    input[type='submit']
+    {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        height: 7vh;
+        border: none;
+        font-size: 20px;
+    }
+    input[type='submit']:hover
+    {
+        color: black;
+        background-color: rgb(226, 178, 74);
+    }
+    .ll
+    {
+        text-align: center;
+        padding-top: 2%;
+        font-weight: bold;
+        color: gray;
+        font-size: 15px;
+    }
+    .main11
+    {
+        width: 100%;
+        height: 160vh;
+        background-color: rgb(36, 36, 36);
+        padding-top: 6vh;
+    }
+    .contets
+    {
+        width: 80%;
+        height: 95%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .labels1, .labels2, .labels3
+    {
+        width: 100%;
+        height: 33.3%;
+    }
+    .l1, .l2, .l3
+    {
+        width: 100%;
+        height: 8vh;
+        font-weight: bold;
+        color: white;
+        padding: 2%;
+        font-size: 15px;
+    }
+    .contents1, .contents2, .contents3
+    {
+        width: 100%;
+        height: 40vh;
+        padding: 2%;
+        color: white;
+    }
+    .call, .mail, .add
+    {
+        width: 100%;
+        height: 8vh;
+        display: flex;
+    }
+    .call > a, .mail > a, .add > a
+    {
+        text-decoration: none;
+        color: white;
+    }
+    .call > a:hover, .mail > a:hover, .add > a:hover
+    {
+        color: rgb(226, 178, 74);
+    }
+    .menu1, .menu2, .menu3
+    {
+        width: 100%;
+        height: 13vh;
+        display: flex;
+    }
+    .image
+    {
+        width: 20%;
+        height: 10vh;
+        border: 1px solid gray;
+        border-radius: 50%;
+    }
+    .image:hover
+    {
+        border: 3px solid rgb(226, 178, 74);
+    }
+    .name1
+    {
+        width: 80%;
+        height: 10vh;
+        text-align: left;
+        padding: 3%;
+    }
+    .name1 > h4
+    {
+        font-size: 20px;
+        color: white;
+    }
+    .we
+    {
+        width: 100%;
+        height: 5.5vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    .w1
+    {
+        font-weight: bold;
+        text-align: left;
+        width: 49%;
+    }
+    .w2
+    {
+        text-align: right;
+        width: 49%;
+    }
+    .main12
+    {
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(22, 22, 22);
+        position: relative;
+    }
+    .copy
+    {
+        width: 80%;
+        position: absolute;
+        text-align: center;
+        color: white;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30%;
+    }
+    .copy > a
+    {
+        text-decoration: none;
+        color: rgb(226, 178, 74);
+    }
+    .copy > a:hover
+    {
+        color: white;
+    }
+        
+    </style>
+</head>
+<body> 
+
+    <div class="main1" id="home">
+        <div class="navv">
+            <h3 class="logo" style="color: rgb(226, 178, 74); font-weight: bold"><a href="#home" style="text-decoration: none; color: white">ROOFMATES</a>.</h3>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">THE MENU</a></li>
+                    <li><a href="#gallery">THE GALLEY</a></li>
+                    <li><a href="#book">BOOK A TABLE</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <h1 class="tag">FOOD | DRINKS | MUSIC</h1>
+            <div class="social">
+                <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+                <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="instagram"></a>
+                <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+                <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="youtube"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main2" id="about">
+        <div class="headd">
+            <h1 class="abou animated fadeInDown">About Us</h1>
+        </div>
+        <div class="contentt">
+            <div class="imagee">
+                <div class="back animated fadeInLeft"></div>
+            </div>
+            <div class="textt">
+                <div class="line">IT STARTED, OUITE SIMPLY, LIKE THIS</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, doloribus consequatur facere eos sapiente tempore aperiam velit accusantium perspiciatis rerum fugit quo tenetur.
+                <br><br>
+                Eos nisi similique animi, distinctio praesentium reiciendis. Officiis sed, iste molestiae possimus vero et veritatis, soluta tempora placeat enim corrupti ad dicta dolorum aliquam quasi sunt maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsum rem non laboriosam, id, at doloremque eligendi provident aspernatur quisquam.</p>
+                <br>
+                <div class="btns">
+                    <div class="btn"><a href="#">LEARN MORE</a></div>
+                    <div class="btn2"><a href="#">SEE THE MENU</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main3">
+        <div class="overlayy"></div>
+        <div class="line3">WHAT OUR CUSTOMERS SAY</div>
+        <div class="contenttt">
+            <div class="lane1">
+                <div class="card1" style="margin-right: 4%">
+                    <div class="texst">"The cuisine is very nice and the food is tasty.. Allover everything was nice.."</div>
+                    <div class="tetimag">
+                        <div class="tetimg1"></div>
+                    </div>
+                    <div class="tettext"><a href="#">Shubham Yadav</a></div>
+                </div>
+                <div class="card2" style="margin-left: 4%">
+                    <div class="texst">"Awesome place... Everything was more than perfect.. Food, Ambience, Live Music.."</div>
+                    <div class="tetimag">
+                        <div class="tetimg2"></div>
+                    </div>
+                    <div class="tettext"><a href="#">Shubhi Jain</a></div>
+                </div>
+            </div>
+            <div class="lane2">
+                <div class="card1" style="margin-right: 4%">
+                    <div class="texst">"Lovely Ambience.. Great food and cocktails.. Lemon Chicken is must try.."</div>
+                    <div class="tetimag">
+                        <div class="tetimg3"></div>
+                    </div>
+                    <div class="tettext"><a href="#">Suraj Paraswani</a></div>
+                </div>
+                <div class="card2" style="margin-left: 4%">
+                    <div class="texst">"Food was Awesome.. Ambience was also good.. but they need to improve their service.."</div>
+                    <div class="tetimag">
+                        <div class="tetimg4"></div>
+                    </div>
+                    <div class="tettext"><a href="#">Shivangi Saraswat</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main4" id="menu">
+        <div class="hedd">
+            <h1 class="abo">Our Menu</h1>
+        </div>
+        <div class="contentttt">
+            <div class="lanee1">
+                <div class="soups" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>SOUPS</h3>
+                    <ul>
+                        <li>MANCHAO SOUP...........Rs.179</li>
+                        <li>SINGAPORE HOT & SOUR SOUP...........Rs.179</li>
+                        <li>CHILLI DUMPLING SOUP...........Rs.179</li>
+                        <li>TOMATO BASIL SOUP...........Rs.179</li>
+                        <li>EGG DROP BRUNT GARLIC SOUP...........Rs.199</li>
+                    </ul>
+                </div>
+                <div class="salad" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>SALAD</h3>
+                    <ul>
+                        <li>PANEER TIKKA SALAD...........Rs.229</li>
+                        <li>MEXICAN NACHOS & JALAPENOS...........Rs.199</li>
+                        <li>GREEK SALAD...........Rs.229</li>
+                        <li>MUSHROOM TIKKA SALAD...........Rs.229</li>
+                        <li>GREEN SALAD...........Rs.139</li>
+                        <li>CEASER SALAD...........Rs.259</li>
+                        <li>CHICKEN TIKKA SALAD...........Rs.259</li>
+                    </ul>
+                </div>
+                <div class="quick" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>QUICK BITES</h3>
+                    <ul>
+                        <li>PEANUT MASALA...........Rs.159</li>
+                        <li>MASALA PAPAD...........Rs.119</li>
+                        <li>PLAIN PAPAD...........Rs.79</li>
+                        <li>ASSORTED SPROUTS...........Rs.129</li>
+                        <li>ALOO CHANA CHAAT...........Rs.139</li>
+                    </ul>
+                </div>
+                <div class="pasta" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>PASTA</h3>
+                    <ul>
+                        <li>ARRABIATA PASTA...........Rs.299</li>
+                        <li>ALFRADO PASTA...........Rs.299</li>
+                        <li>DRUNKEN LASAGNA...........Rs.309</li>
+                        <li>ROASTED PEPPER & PESTO...........Rs.309</li>
+                        <li>CHICKEN & CHEESE...........Rs.329</li>
+                    </ul>
+                </div>
+                <div class="pizza" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>PIZZA</h3>
+                    <ul>
+                        <li>SCHEZWAN CHILLI PANEER...........Rs.329</li>
+                        <li>INDIAN DELITE PANEER TIKKA...........Rs.319</li>
+                        <li>EXOTICA VEGETABLES PIZZA...........Rs.309</li>
+                        <li>MARGHERITA...........Rs.329</li>
+                        <li>THE MEAT FACTORY PIZZA...........Rs.389</li>
+                        <li>PERI PERI CHICKEN...........Rs.379</li>
+                        <li>DHISHKIAOON...........Rs.379</li>
+                        <li>PESTO CHICKEN...........Rs.379</li>
+                    </ul>
+                </div>
+                <div class="burger" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>BURGER</h3>
+                    <ul>
+                        <li>POTATO TWISTER...........Rs.219</li>
+                        <li>CORN & CHEESE BURGER...........Rs.239</li>
+                        <li>CAJUN SPICE CHICKEN BURGER...........Rs.289</li>
+                        <li>GRILLED CHICKEN & MESH POTATO...........Rs.289</li>
+                    </ul>
+                </div>
+                <div class="quesadilla" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>QUESADILLA</h3>
+                    <ul>
+                        <li>3 PEPPER & JALAPENO...........Rs.289</li>
+                        <li>CAJUN CHICKEN QUESADILLA...........Rs.339</li>
+                    </ul>
+                </div>
+                <div class="fajitas" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>FAJITAS</h3>
+                    <ul>
+                        <li>CLASSIC COTTAGE CHEESE...........Rs.309</li>
+                        <li>SPICED CHICKEN & CHEESE...........Rs.329</li>
+                    </ul>
+                </div>
+                <div class="tacos" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>TACOS</h3>
+                    <ul>
+                        <li>PERI PERI COTTAGE CHEESE...........Rs.259</li>
+                        <li>PEPPERS & JALAPENOS...........Rs.259</li>
+                        <li>PULLED CHICKEN TIKKA...........Rs.289</li>
+                        <li>BBQ GRILLED CHICKEN...........Rs.289</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lanee2">
+                <div class="tandoori" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>TANDOORI STARTERS</h3>
+                    <ul>
+                        <li>PANEER TIKKA...........Rs.329</li>
+                        <li>ACHAARI PANEER TIKKA...........Rs.329</li>
+                        <li>TULSI PUDINA PANEER TIKKA...........Rs.329</li>
+                        <li>MAKHAN MALAAI PANEER TIKKA...........Rs.329</li>
+                        <li>DAHI KE SHOLEY...........Rs.309</li>
+                        <li>SEEKH KEBAB...........Rs.299</li>
+                        <li>HARA BHARA KEBAB...........Rs.309</li>
+                        <li>BHOOT JOLOKIA MUSHROOM...........Rs.319</li>
+                        <li>MALAAI BROCCOLI...........Rs.349</li>
+                        <li>TANDOORI POTATO BRAVAS...........Rs.329</li>
+                        <li>ACHAARI FISH TIKKA...........Rs.429</li>
+                        <li>TANDOORI KUKKAD...........Rs.359</li>
+                        <li>CHICKEN TIKKA...........Rs.369</li>
+                        <li>ACHAARI CHICKEN TIKKA...........Rs.369</li>
+                        <li>MALAAI CHICKEN TIKKA...........Rs.369</li>
+                        <li>GILAFI SEEKH KEBAB CHICKEN...........Rs.369</li>
+                        <li>COUPLE KEBAB...........Rs.429</li>
+                        <li>MUTTON SEEKH...........Rs.429</li>
+                    </ul>
+                </div>
+                <div class="platter" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>PLATTER</h3>
+                    <ul>
+                        <li>MEZZE PLATTER...........Rs.439</li>
+                        <li>TANDOORI VEG PLATTER...........Rs.499</li>
+                        <li>TANDOORI NON VEG PLATTER...........Rs.599</li>
+                    </ul>
+                </div>
+                <div class="chinese" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>CHINESE STARTERS</h3>
+                    <ul>
+                        <li>HONEY CHILLI POTATO...........Rs.279</li>
+                        <li>SCHEZWAN CHILLI PANEER...........Rs.329</li>
+                        <li>SALT & PEPPER...........Rs.309</li>
+                        <li>CORN SALT & PEPPER...........Rs.309</li>
+                        <li>DRY MANCHURIAN...........Rs.299</li>
+                        <li>CIGAAR ROLLS...........Rs.279</li>
+                        <li>HONEY CHILLI MUSHROOM...........Rs.309</li>
+                        <li>LEMON PANEER...........Rs.319</li>
+                        <li>SAUTE VEGETABLES...........Rs.299</li>
+                        <li>THAI CHILLI BASIL FISH...........Rs.409</li>
+                        <li>DRUMS OF HEAVEN...........Rs.369</li>
+                        <li>SRIRACHA CHICKEN STICKS...........Rs.369</li>
+                        <li>CHICKEN SALT & PEPPER...........Rs.369</li>
+                        <li>SCHEZWAN CHILLI CHICKEN...........Rs.369</li>
+                        <li>CRISPY GINGER CHICKEN...........Rs.369</li>
+                        <li>LEMON CHICKEN...........Rs.379</li>
+                        <li>LEMON FISH...........Rs.389</li>
+                    </ul>
+                </div>
+                <div class="fries" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>FRIES</h3>
+                    <ul>
+                        <li>FRENCH FRIES...........Rs.209</li>
+                        <li>CAJUN FRIES...........Rs.219</li>
+                        <li>SCHEZWAN FRIES...........Rs.219</li>
+                        <li>CHEESE FRIES...........Rs.219</li>
+                    </ul>
+                </div>
+                <div class="dimsum" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>DIMSUM</h3>
+                    <ul>
+                        <li>MUSHROOM & BROCCOLI...........Rs.279</li>
+                        <li>VEGETABLE KO THAY...........Rs.269</li>
+                        <li>CHICKEN KO THAY...........Rs.349</li>
+                        <li>SPICY CHICKEN SUI MAI...........Rs.349</li>
+                    </ul>
+                </div>
+                <div class="continental" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>CONTINENTAL</h3>
+                    <ul>
+                        <li>CHEESE GARLIC BREAD...........Rs.239</li>
+                        <li>LOADED NACHOS...........Rs.269</li>
+                        <li>CHILLI GARLIC MAC & CHEESE...........Rs.299</li>
+                        <li>CONTINENTAL VEG SIZZLER...........Rs.399</li>
+                        <li>BEER BATTER FISH & CHIPS...........Rs.439</li>
+                        <li>FISH & CHIPS...........Rs.429</li>
+                        <li>FRIED CAJUN SAUSAGE BITES...........Rs.299</li>
+                        <li>CONTINENTAL NON VEG SIZZLER...........Rs.499</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lanee3">
+                <div class="maincourse" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>MAIN COURSE INDIAN</h3>
+                    <ul>
+                        <li>BUTTER PANEER MASALA...........Rs.329</li>
+                        <li>DAL MAKHANI...........Rs.309</li>
+                        <li>YELLOW DAL TADKA...........Rs.289</li>
+                        <li>MIXED VEGETABLES...........Rs.309</li>
+                        <li>PALAK PANEER...........Rs.329</li>
+                        <li>CHANA MASALA...........Rs.309</li>
+                        <li>DUM ALOO...........Rs.299</li>
+                        <li>MALAAI KOFTA...........Rs.319</li>
+                        <li>KADHAI PANEER...........Rs.329</li>
+                        <li>PANEER LABABDAR...........Rs.329</li>
+                        <li>MUTTON ROGAN JOSH...........Rs.429</li>
+                        <li>MUTTON SEEKH KEBAB MASALA...........Rs.419</li>
+                        <li>BUTTER CHICKEN...........Rs.409</li>
+                        <li>CHICKEN CURRY...........Rs.409</li>
+                        <li>CHICKEN TIKKA MASALA...........Rs.409</li>
+                        <li>KEEMA PAO...........Rs.359</li>
+                        <li>KADHAAI CHICKEN...........Rs.489</li>
+                        <li>FISH CURRY...........Rs.429</li>
+                        <li>CHICKEN LABABDAR...........Rs.409</li>
+                        <li>EGG CURRY...........Rs.349</li>
+                    </ul>
+                </div>
+                <div class="breads" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>BREADS</h3>
+                    <ul>
+                        <li>TANDOORI ROTI...........Rs.39</li>
+                        <li>BUTTER ROTI...........Rs.49</li>
+                        <li>MISSI ROTI...........Rs.49</li>
+                        <li>MASALA MISSI...........Rs.59</li>
+                        <li>GARLIC NAAN...........Rs.59</li>
+                        <li>PLAIN NAAN...........Rs.49</li>
+                        <li>BUTTER NAAN...........Rs.59</li>
+                        <li>AMRITSARI KULCHA...........Rs.69</li>
+                        <li>STUFFED KULCHA...........Rs.79</li>
+                        <li>CHIPOTLE NAAN...........Rs.59</li>
+                        <li>LACCHA PARANTHA...........Rs.69</li>
+                        <li>MINT PUDHINA KA PARANTHA...........Rs.59</li>
+                        <li>CHILLI PARANTHA...........Rs.59</li>
+                        <li>KEEMA KULCHA...........Rs.99</li>
+                    </ul>
+                </div>
+                <div class="rice" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>RICE & NOODLES</h3>
+                    <ul>
+                        <li>HAKKA NOODLES...........Rs.269</li>
+                        <li>VEG BIRYANI...........Rs.309</li>
+                        <li>PLAIN RICE...........Rs.189</li>
+                        <li>FRIED RICE...........Rs.209</li>
+                        <li>JEERA RICE...........Rs.219</li>
+                        <li>VEG PULAO...........Rs.219</li>
+                        <li>CHICKEN BIRYANI...........Rs.379</li>
+                        <li>MUTTON BIRYANI...........Rs.379</li>
+                    </ul>
+                </div>
+                <div class="raita" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>RAITA</h3>
+                    <ul>
+                        <li>PINEAPPLE RAITA...........Rs.179</li>
+                        <li>MINT RAITA...........Rs.189</li>
+                        <li>MIXED VEG RAITA...........Rs.189</li>
+                        <li>BOONDI RAITA...........Rs.179</li>
+                    </ul>
+                </div>
+                <div class="cc" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>MAIN COURSE<br>CONTINENTAL & CHINESE</h3>
+                    <ul>
+                        <li>JALAPENO COTTAGE CHEESE...........Rs.349</li>
+                        <li>MANCHURIAN GRAVY...........Rs.299</li>
+                        <li>CHICKEN STEAK...........Rs.399</li>
+                        <li>PAN SEARED FISH FILLET...........Rs.419</li>
+                    </ul>
+                </div>
+                <div class="deserts" style="width: 90%; height: auto; padding: 3%; border-top: 2px solid rgb(116, 66, 13)">
+                    <h3>DESSERTS</h3>
+                    <ul>
+                        <li>SIZZLING BROWNIE...........Rs.199</li>
+                        <li>CHOICE OF ICE CREAM...........Rs.99</li>
+                        <li>GULAB JAMUN...........Rs.89</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main5">
+        <div class="overlay"></div>
+        <div class="linee">
+            <div class="he1">WE BELIEVE IN CUSTOMER SERVICE </div>
+            <br>
+            <div class="he2"><a href="">COME</a> DINE IN!</div>
+        </div>
+    </div>
+
+    <div class="main8" id="gallery">
+        <div class="hedd">
+            <h1 class="abou">The Gallery</h1>
+        </div>
+        <div class="galm">
+            <div class="galma">
+                <div class="galm1">
+                    <div class="lan1">
+                        <div class="im1" style="background-image: url('images/1.jpg');background-size: cover;background-position: center center"></div>
+                        <div class="im2" style="background-image: url('images/2.jpg');background-size: cover;background-position: center center"></div>
+                    </div>
+                    <div class="im3" style="background-image: url('images/3.jpg');background-size: cover;background-position: center center"></div>
+                </div>
+                <div class="galm2">
+                    <div class="lan2">
+                        <div class="im4" style="background-image: url('images/4.jpg');background-size: cover;background-position: center center"></div>
+                        <div class="im5" style="background-image: url('images/5.jpg');background-size: cover;background-position: center center"></div>
+                    </div>
+                    <div class="im6" style="background-image: url('images/6.jpg');background-size: cover;background-position: center center"></div>
+                </div>
+            </div>
+            <div class="galmb">
+                <div class="galm3">
+                    <div class="lan1">
+                        <div class="im1" style="background-image: url('images/7.jpg');background-size: cover;background-position: center center"></div>
+                        <div class="im2" style="background-image: url('images/8.jpg');background-size: cover;background-position: center center"></div>
+                    </div>
+                    <div class="im3" style="background-image: url('images/9.jpg');background-size: cover;background-position: center center"></div>
+                </div>
+                <div class="galm4">
+                    <div class="im7" style="background-image: url('images/10.jpg');background-size: cover;background-position: center center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main7">
+        <div class="overlay"></div>
+        <div class="lineee">
+            <div class="he3">COME IN! DANCE - EAT - HERE AT <a href="#">ROOFMATES</a></div>
+            <div class="he4">Great for a <a href="#">Outing</a></div>
+        </div>
+    </div>
+
+    <div class="main10" id="book">
+        <div class="hedd">
+            <h1 class="abou">Reservations</h1>
+        </div>
+        <div class="form">
+            <div class="lab">BOOKING FORM</div>
+            <div class="labli">NEW IN TOWN? SELECT FROM OUR LISTED DISHES WITH CHOICE OF YOUR TABLE..</div>
+        </div>
+        <div class="cform">
+            <form action="">
+                <div class="select">
+                    <label for="restaurant">Select Your Table</label><br>
+                    <select id="restaurant" name="Restaurant">
+                        <option value="">Select...</option>
+                        <option value="79366">Balcony Seats</option>
+                        <option value="105511">Open Roof</option>
+                        <option value="49051">Cabin</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <label for="date">Choose a Date</label><br>
+                    <input id="date" name="startDate" type="date" autocomplete="off">
+                </div>
+                <div class="select">
+                    <label for="time">Choose a Time</label><br>
+                    <select id="time" name="ResTime">
+                        <option value="5:00pm" >12:00 PM</option>
+                        <option value="5:30pm" >1:30 PM</option>
+                        <option value="6:00pm" >3:00 PM</option>
+                        <option value="6:30pm" >4:30 PM</option>
+                        <option value="7:00pm"  selected="selected" >6:00 PM</option>
+                        <option value="7:30pm" >7:30 PM</option>
+                        <option value="8:00pm" >9:00 PM</option>
+                        <option value="8:30pm" >10:30 PM</option>
+                        <option value="9:00pm" >11:00 PM</option>
+                        <option value="9:30pm" >12:00 AM</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <label for="party-8099">How Many People?</label><br>
+                    <select id="party-8099" name="partySize">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4"selected="selected">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="formbtn">
+                    <input type="submit" value="Find a Table!"/>
+                </div>
+            </form>
+            <div class="ll">
+                <p>Please allow up to 24 hours for booking confirmation</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main11">
+        <div class="contets">
+            <div class="labels1">
+                <div class="l1">CONTACT US</div>
+                <div class="contents1">
+                    <div class="para"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis odit quo voluptatibus repellendus recusandae excepturi architecto.</p></div>
+                    <div class="call">
+                        <div style="width: 10%"><i class="fas fa-phone-alt"></i></div>
+                        <a href="tel:+918272815720">+91-8272815720</a>
+                    </div>
+                    <div class="mail">
+                        <div style="width: 10%"><i class="fas fa-envelope"></i></div>
+                        <a href="mailto:abhishek251gupta@gmail.com">abhishek251gupta@gmail.com</a>
+                    </div>
+                    <div class="add">
+                        <div style="width: 10%"><i class="fas fa-map-marker-alt"></i></div>
+                        <a>Anna Icon Palace, Near Deviram Food Circle, Sikandra, Agra</a>
+                    </div>
+                </div>
+            </div>
+            <div class="labels2">
+                <div class="l2">NEW ON THE MENU</div>
+                <div class="contents2">
+                    <div class="menu1">
+                        <div class="image" style="background-image: url('images/5.jpg'); background-size: cover; background-position: center center"></div>
+                        <div class="name1">
+                            <h4>CIGAR ROLLS</h4>
+                        </div>
+                    </div>
+                    <div class="menu2">
+                        <div class="image" style="background-image: url('images/9.jpg'); background-size: cover; background-position: center center"></div>
+                        <div class="name1">
+                            <h4>VEGGIE FEAST PIZZA</h4>
+                        </div>
+                    </div>
+                    <div class="menu3">
+                        <div class="image" style="background-image: url('images/blog 2.jpg'); background-size: cover; background-position: center center"></div>
+                        <div class="name1">
+                            <h4>ALFREDO PASTA</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="labels3">
+                <div class="l3">OPENING TIMES</div>
+                <div class="contents3">
+                    <div class="we">
+                        <div class="w1">Monday</div>
+                        <div class="w2">12PM - 12AM</div>
+                    </div>
+                    <div class="we">
+                        <div class="w1">Teusday</div>
+                        <div class="w2">12PM - 12AM</div>
+                    </div>
+                    <div class="we">
+                        <div class="w1">Wednesday</div>
+                        <div class="w3" style="background-color: red; border-radius: 10%; height: 4vh">Closed</div>
+                    </div>
+                    <div class="we">
+                        <div class="w1">Thursday</div>
+                        <div class="w2">12PM - 12AM</div>
+                    </div>
+                    <div class="we">
+                        <div class="w1">Friday</div>
+                        <div class="w2">12PM - 12AM</div>
+                    </div>
+                    <div class="we">
+                        <div class="w1">Saturday</div>
+                        <div class="w2">12PM - 12AM</div>
+                    </div>
+                    <div class="we">
+                        <div class="w1">Sunday</div>
+                        <div class="w2">12PM - 12AM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main12">
+        <div class="copy">@2019 copyright reserved <a href="https://ausuphotography.github.io/Website/index.html">AuSu Photography</a></div>
+    </div>
+
+<script src="js/wow.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script>
+</body>
+</html>
